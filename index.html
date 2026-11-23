@@ -201,13 +201,13 @@
             </div>
 
             <div class="field-group">
-              <label for="habit-desc" class="visually-hidden">Descrição (opcional)</label>
+              <label for="habit-desc" class="visually-hidden">Descrição</label>
               <input
                 type="text"
                 id="habit-desc"
                 name="description"
                 class="line-input"
-                placeholder="Descrição (opcional)"
+                placeholder="Descrição"
                 maxlength="120"
                 enterkeyhint="done"
               >
@@ -286,7 +286,7 @@
             <hr class="form-divider">
 
             <div class="option-row">
-              <label for="habit-notify" class="option-row-label">Notificação (opcional)</label>
+              <label for="habit-notify" class="option-row-label">Notificação</label>
               <label class="switch">
                 <input type="checkbox" id="habit-notify" name="notify" class="visually-hidden">
                 <span class="switch-track" aria-hidden="true"></span>
@@ -337,7 +337,7 @@
             </div>
 
             <div class="field-group">
-              <label for="task-desc" class="field-label">Descrição (opcional)</label>
+              <label for="task-desc" class="field-label">Descrição</label>
               <input
                 type="text"
                 id="task-desc"
@@ -350,7 +350,7 @@
             </div>
 
             <div class="field-section">
-              <span class="section-legend">Checklist (opcional)</span>
+              <span class="section-legend">Checklist</span>
               <div id="checklist-items-editor" class="checklist-editor"></div>
               <div class="checklist-add-box">
                 <label for="checklist-new-input" class="visually-hidden">Adicionar item ao checklist</label>
@@ -412,9 +412,15 @@
             <hr class="form-divider">
 
             <div class="option-row">
-              <label for="task-date-text" class="option-row-label">Prazo (opcional)</label>
+              <label for="task-date-text" class="option-row-label">Prazo</label>
               <div class="date-control-wrap">
-                <button type="button" id="task-date-empty-btn" class="date-empty-pill">Nenhum</button>
+                <button type="button" id="task-date-empty-btn" class="date-empty-pill">
+                  <span>Nenhum</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 3v4M8 3v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
                 <div id="task-date-active-wrap" class="date-active-pill" hidden>
                   <label class="date-calendar-trigger" aria-label="Abrir calendário">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -438,7 +444,7 @@
             </div>
 
             <div class="option-row">
-              <label for="task-repeat" class="option-row-label">Repetição (opcional)</label>
+              <label for="task-repeat" class="option-row-label">Repetição</label>
               <div class="select-pill-wrap">
                 <select id="task-repeat" name="repeat" class="select-pill">
                   <option value="Nenhuma" selected>Nenhuma</option>
@@ -453,7 +459,7 @@
             </div>
 
             <div class="option-row">
-              <label for="task-notify" class="option-row-label">Notificação (opcional)</label>
+              <label for="task-notify" class="option-row-label">Notificação</label>
               <label class="switch">
                 <input type="checkbox" id="task-notify" name="notify" class="visually-hidden">
                 <span class="switch-track" aria-hidden="true"></span>
