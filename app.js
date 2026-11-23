@@ -651,9 +651,14 @@
   // ==================== RENDERING ====================
   function renderArena() {
     el.stagePill.textContent = `FASE ${state.stage}`;
+    const stageColor = STAGE_COLORS[(state.stage - 1) % STAGE_COLORS.length];
     const battleScene = document.querySelector('.battle-scene');
     if (battleScene) {
-      battleScene.style.backgroundColor = STAGE_COLORS[(state.stage - 1) % STAGE_COLORS.length];
+      battleScene.style.backgroundColor = stageColor;
+    }
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+      themeMeta.setAttribute('content', stageColor);
     }
 
     if (state.combatFeedback && state.combatFeedback.text) {
@@ -1231,6 +1236,9 @@
   }
 
   function renderCustomizeModal() {
+    const stageColor = STAGE_COLORS[(state.stage - 1) % STAGE_COLORS.length];
+    const previewBox = document.querySelector('.customize-preview');
+    if (previewBox) previewBox.style.backgroundColor = stageColor;
     const equipped = COSMETIC_ITEMS.find((i) => i.id === state.hero.equippedItem);
     el.customizeHeroSprite.innerHTML = getHeroSvg('#161616', 70, 80, state.hero.equippedItem);
     el.customizeEquippedLabel.textContent = equipped ? `Equipado: ${equipped.name}` : 'Visual padrão';
